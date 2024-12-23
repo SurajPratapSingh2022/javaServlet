@@ -1,0 +1,63 @@
+                                                       Servlets Notes
+													--------------------
+--> Q) What is Servlet ?
+--> Q) What is Servlet Container ?
+--> Q) What is Servlet Engine ?
+--> Q) Explain Servlet Life Cycle ?
+--> Q) Illustrate the differences b/w Servlet & CGI(Common Gateway Interface) ?
+
+--> There are only 3 ways to creating servlets:
+		1) via implementing Servlet		[using implements keyword]
+		2) via extending Generic Servlet	[using extends keyword]
+		3) via extending HttpServlet		[using extends keyword]
+
+
+--> 2 ways to access Servlet page from jsp
+		1) using Annotation
+			eg:: @WebServlet("/DefaultServlet") mention in servlet file
+		2) using web.xml file
+			eg::     <!-- DefaultServlet Configuration -->
+    				<servlet>
+        					<servlet-name>DefaultServlet</servlet-name>
+        					<servlet-class>com.servlet.DefaultServlet</servlet-class>
+    				</servlet>
+    				<servlet-mapping>
+        					<servlet-name>DefaultServlet</servlet-name>
+        					<url-pattern>/DefaultServlet</url-pattern>
+    				</servlet-mapping>
+
+    				<!-- GenericServlet Configuration -->
+    				<servlet>
+        					<servlet-name>GenericServlet</servlet-name>
+       						 <servlet-class>com.servlet.GenericServlet</servlet-class>
+    				</servlet>
+    				<servlet-mapping>
+     					   <servlet-name>GenericServlet</servlet-name>
+        					<url-pattern>/GenericServlet</url-pattern>
+   					 </servlet-mapping>
+	
+   					 <!-- HttpServlet Configuration -->
+   					<servlet>
+        					<servlet-name>HttpServlet</servlet-name>
+      						<servlet-class>com.servlet.HttpServlet</servlet-class>
+				    </servlet>
+				    <servlet-mapping>
+					        <servlet-name>HttpServlet</servlet-name>
+					        <url-pattern>/HttpServlet</url-pattern>
+				    </servlet-mapping>
+
+				    <!-- Welcome File List -->
+				    <welcome-file-list>
+					        <welcome-file>index.jsp</welcome-file>
+				    </welcome-file-list>
+
+
+
+
+
+
+
+
+
+
+			
