@@ -1,21 +1,58 @@
                                                        Servlets Notes
-													--------------------
+										--------------------
+--> Q) What is Server ?
+		Ans:: 
+
 --> Q) What is Servlet ?
+		Ans::
+
 --> Q) What is Servlet Container ?
+		Ans:: Container is available inside server. Container is run time component of any environment.
+
 --> Q) What is Servlet Engine ?
+		Ans::
+
 --> Q) Explain Servlet Life Cycle ?
---> Q) Illustrate the differences b/w Servlet & CGI(Common Gateway Interface) ?
+		Ans::-> Life Cycle Methods:
+				1) init	2)Service	3) Destroy
+			-> these all method call by container.
+
+--> Q) How Servlet Technology advanced from CGI(Common Gateway Interface) & Also Distinguish the differences b/w Servlet & CGI ?
+
+
+
+
+
+
+--> 2 Types of Server
+		1) Web Server 
+		2) Application Server
+
+--> 2 Types of Container:
+		1) Web Container
+		2) EJB Container
+
+--> 2 Types of Component
+		1) Web Component
+		2) EJB Component
 
 --> There are only 3 ways to creating servlets:
 		1) via implementing Servlet		[using implements keyword]
 		2) via extending Generic Servlet	[using extends keyword]
+			--> predefined a constructor & some abstract methods:
+					1) init		2) service		3) destroy
+					4) getServletConfig		5) getServletInfo
 		3) via extending HttpServlet		[using extends keyword]
-
+			--> predefined a constructor & some abstract methods:
+					1) init		2) service		3) destroy
+					4) getServletConfig		5) getServletInfo
+					6) doGet	7) doPost	8) doPut	9) doDelete
+					10) doHead	11) doOptions	12) doTrace
 
 --> 2 ways to access Servlet page from jsp
 		1) using Annotation
 			eg:: @WebServlet("/DefaultServlet") mention in servlet file
-		2) using web.xml file
+		2) using web.xml file [web.xml is also known as 'Deployment Descriptor'.
 			eg::     <!-- DefaultServlet Configuration -->
     				<servlet>
         					<servlet-name>DefaultServlet</servlet-name>
