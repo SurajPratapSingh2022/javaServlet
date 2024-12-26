@@ -87,8 +87,21 @@
 				    <welcome-file-list>
 					        <welcome-file>index.jsp</welcome-file>
 				    </welcome-file-list>
+Database Connection Steps:
+-------------------------
+     Steps			Methods
+1) get data		[request.getParameter]
+2) db connection	[Class.forName,DriverMangaer.getConnection]
+3) insert Query		[con.preparedStatement,setString,ps.executeUpdate]
+4) response		[response.setContentType,pw.print(getWriter),request.getRequestDispatcher,rd.include]
 
-
+Session management Techniques:
+----------------------------
+There are four session management techniques:
+o HttpSession
+o Cookies
+o Url-Rewriting
+o Hidden Fields
 
 
 
